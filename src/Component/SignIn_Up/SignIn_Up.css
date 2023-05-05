@@ -1,0 +1,55 @@
+#bg-container{
+    height: fit-content;
+    padding: 80px 0 50px 0;
+    background-color: #f5f5f5;
+}
+
+.login-container{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.register{
+    padding: 110px 150px 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    column-gap: 100px;
+    background-color: white;
+}
+
+.register .reg_info{
+    width: 650px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reg_info p{
+    text-align: justify;
+    color: gray;
+}
+
+.form_grid{
+    display: grid;
+    grid-template-areas:
+        'FName FName LName LName'
+        'DOB DOB BlGroup BlGroup'
+        'Phone Phone Phone Phone'
+        'Gender Gender LDD LDD'
+        'Email Email Email Email'
+        'Address Address Address Address'
+        'State State City City'
+        'Pin Pin Space Space'
+        'Pass Pass Pass Pass';
+    gap: 15px;
+}
+
+.user_form_grid{
+    display: grid;
+    grid-template-areas:
+        'FName FName LName LName'
+        'DOB DOB Gender Gender'
+        'Email Email Email Email'
+        'Pass Pass Pass Pass';
+    gap: 15px;
+}
