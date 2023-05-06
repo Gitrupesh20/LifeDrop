@@ -113,40 +113,53 @@ export default function About() {
             <span className='aboutTag' style={{letterSpacing:"2px"}}>OUR TEAM</span>
             <div className="cardholder">
               <div className="member">
-                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/neeraj.jpg'})`}}>
+                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/abhinav.jpg'})`}}>
                     {/* <h3>Developer</h3> */}
                 </div>
                 <section className="member-details">
-                    <span>Neeraj Panmand</span>
+                    <span>Abhinav Singh</span>
                     <p>Software Developer</p>
                     <section id="link">
-                        <a href="https://in.linkedin.com/in/neeraj-panmand" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/Code-4ge" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/singhsaab62220" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/singhsaab62220" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                     </section>
                 </section>
               </div>
 
               <div className="member">
-                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/tushar.jpeg'})`}}>
+                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/rupesh.jpg'})`}}>
                     {/* <h3>Developer</h3> */}
                 </div>
                 <section className="member-details">
-                    <span>Tushar Sangle</span>
+                    <span>Rupesh Kr Sharma</span>
                     <p>Software Developer</p>
                     <section id="link">
-                        <a href="https://www.linkedin.com/in/tushar-sangle" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/TusharSangle" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/rupesh-sharma-a22905211" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/Gitrupesh20" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                     </section>
                 </section>
               </div>
 
               <div className="member">
-                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/taha.jpg'})`}}>
+                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/kishan'})`}}>
                     {/* <h3>Developer</h3> */}
                 </div>
                 <section className="member-details">
-                    <span>Gulam Taha Yaseen</span>
+                    <span>Kishan Kr Tiwari</span>
                     <p>Software Developer</p>
                     <section id="link">
-                        <a href="https://www.linkedin.com/in/taha-yasin/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/taha-yasin" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/kishan-kumar-tiwari-02ba25229" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/kishankumartiwar" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    </section>
+                </section>
+              </div>
+	      
+	      <div className="member">
+                <div className="image" style={{background:`linear-gradient(180deg, rgba(0, 0, 0, 0.041), rgba(23, 85, 177, 0.233), rgba(241, 85, 228, 0.342)), url(${process.env.PUBLIC_URL + '/assets/team/rupesh.jpg'})`}}>
+                    {/* <h3>Developer</h3> */}
+                </div>
+                <section className="member-details">
+                    <span>Roshan Singh Rajput</span>
+                    <p>Software Developer</p>
+                    <section id="link">
+                        <a href="https://www.linkedin.com/in/roshan-singh-873a53237" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/voidnull69" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                     </section>
                 </section>
               </div>
