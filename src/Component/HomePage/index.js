@@ -171,7 +171,7 @@ export const Contact = () => {
           <br />
           Together We Can Make World More Health & Better
         </p>
-        <a href="mailto: blood.donor@mail.com" rel="noopener noreferrer">
+        <a href="mailto: LifeDrop@gmail.com" rel="noopener noreferrer">
           Contact Us
         </a>
       </div>
