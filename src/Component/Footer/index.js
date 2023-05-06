@@ -5,12 +5,9 @@ export default function Footer() {
     <div className="footer">
       <div className="footersec" id="upfooter">
         <img
-          src={
-            process.env.PUBLIC_URL +
-            "/assets/20230506_001728__1_-removebg-preview.png"
-          }
+          src={process.env.PUBLIC_URL + "/assets/logofooter.png"}
           alt="logo"
-          style={{ width: "100px", height: "30px" }}
+          style={{ width: "100px", height: "50px" }}
         />
         <section>
           <i class="fab fa-facebook"></i>
@@ -21,7 +18,7 @@ export default function Footer() {
       </div>
       <hr />
       <div className="footersec" id="downfooter">
-        <p>© BLOOD-DONOR 2021. We love our users!</p>
+        <p>© LifeDrop 2023. We love our users!</p>
         <section>
           <a href="#">Privacy & Policies</a>
           <a href="#">Terms & Conditions</a>

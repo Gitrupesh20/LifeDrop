@@ -78,10 +78,7 @@ export default function Navbar() {
           <a href="/">
             <img
               id="logo"
-              src={
-                process.env.PUBLIC_URL +
-                "/assets/20230506_001728__1_-removebg-preview.png"
-              }
+              src={process.env.PUBLIC_URL + "/assets/LifeDrop.png"}
               alt="logo"
             />
           </a>

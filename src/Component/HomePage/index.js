@@ -46,8 +46,7 @@ export const Header = () => {
           </h1>
           <p>
             <span>
-              "The richness of life is not in what we accumulate, but in what we
-              give."
+              "Blood donation is not a duty but a service to mankind."
               <br />
             </span>
           </p>
