@@ -4,12 +4,12 @@ export const ShowRequestPost = () => {
   return (
     <>
       <div className="curPost">
-        <section className="warning">
-          <span style={{ marginRight: "5px" }}>Warning:</span>{" "}
+        <section className="Donate">
+          <span style={{ marginRight: "5px" }}>Quote:</span>{" "}
           <marquee behavior="scroll" direction="left" scrollamount="3">
             {" "}
-            Do not pay any amount to any person promising supply of blood
-            packets or arranging donors.
+            "Be a hero, donate blood and save lives. You don't need a cape to be
+            a superhero, just a willing heart and a helping hand."
           </marquee>
         </section>
         <hr />
@@ -21,50 +21,50 @@ export const ShowRequestPost = () => {
             <div className="singlePost">
               <section id="b_type">AB+</section>
               <section id="b_details">
-                delhi
-                <br /> <span>Due: 27/02/2022</span>
+                Pitampura, Delhi
+                <br /> <span>Due: 27/02/2023</span>
+              </section>
+            </div>
+            <div className="singlePost">
+              <section id="b_type">A+ </section>
+              <section id="b_details">
+                west delhi, Delhi <br /> <span>Due: 27/01/2023</span>
+              </section>
+            </div>
+            <div className="singlePost">
+              <section id="b_type">O+</section>
+              <section id="b_details">
+                North Delhi,Delhi <br /> <span>Due: 11/02/2023</span>
+              </section>
+            </div>
+            <div className="singlePost">
+              <section id="b_type">B+</section>
+              <section id="b_details">
+                Pune, Maharashtra <br /> <span>Due: 20/02/2023</span>
+              </section>
+            </div>
+            <div className="singlePost">
+              <section id="b_type">A-</section>
+              <section id="b_details">
+                Noida Sec:12, Delhi NCR <br /> <span>Due: 13/01/2023</span>
+              </section>
+            </div>
+            <div className="singlePost">
+              <section id="b_type">O-</section>
+              <section id="b_details">
+                Rohini, Delhi <br /> <span>Due: 07/02/2023</span>
+              </section>
+            </div>
+            <div className="singlePost">
+              <section id="b_type">AB-</section>
+              <section id="b_details">
+                South Delhi, Delhi <br /> <span>Due: 27/04/2023</span>
               </section>
             </div>
             <div className="singlePost">
               <section id="b_type">AB+</section>
               <section id="b_details">
-                Maharashtra, Pune <br /> <span>Due: 27/02/2022</span>
-              </section>
-            </div>
-            <div className="singlePost">
-              <section id="b_type">AB+</section>
-              <section id="b_details">
-                North Delhi,Delhi <br /> <span>Due: 27/02/2022</span>
-              </section>
-            </div>
-            <div className="singlePost">
-              <section id="b_type">AB+</section>
-              <section id="b_details">
-             Pune, Maharashtra <br /> <span>Due: 27/02/2022</span>
-              </section>
-            </div>
-            <div className="singlePost">
-              <section id="b_type">AB+</section>
-              <section id="b_details">
-                Noida Sec:12, Delhi NCR <br /> <span>Due: 27/02/2022</span>
-              </section>
-            </div>
-            <div className="singlePost">
-              <section id="b_type">AB+</section>
-              <section id="b_details">
-                Mah <br /> <span>Due: 27/02/2022</span>
-              </section>
-            </div>
-            <div className="singlePost">
-              <section id="b_type">AB+</section>
-              <section id="b_details">
-                Maharashtra, Pune <br /> <span>Due: 27/02/2022</span>
-              </section>
-            </div>
-            <div className="singlePost">
-              <section id="b_type">AB+</section>
-              <section id="b_details">
-                Maharashtra, Pune <br /> <span>Due: 27/02/2022</span>
+                Mumbai, Maharashtra <br /> <span>Due: 27/02/2022</span>
               </section>
             </div>
           </div>
