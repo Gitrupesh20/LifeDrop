@@ -40,19 +40,19 @@ export const ShowRequestPost = () => {
             <div className="singlePost">
               <section id="b_type">AB+</section>
               <section id="b_details">
-                Maharashtra, Pune <br /> <span>Due: 27/02/2022</span>
+             Pune, Maharashtra <br /> <span>Due: 27/02/2022</span>
               </section>
             </div>
             <div className="singlePost">
               <section id="b_type">AB+</section>
               <section id="b_details">
-                Maharashtra, Pune <br /> <span>Due: 27/02/2022</span>
+                Noida Sec:12, Delhi NCR <br /> <span>Due: 27/02/2022</span>
               </section>
             </div>
             <div className="singlePost">
               <section id="b_type">AB+</section>
               <section id="b_details">
-                Maharashtra, Pune <br /> <span>Due: 27/02/2022</span>
+                Mah <br /> <span>Due: 27/02/2022</span>
               </section>
             </div>
             <div className="singlePost">
