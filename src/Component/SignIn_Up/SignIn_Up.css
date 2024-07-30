@@ -49,7 +49,9 @@
     grid-template-areas:
         'FName FName LName LName'
         'DOB DOB Gender Gender'
+        'Phone Phone Phone Phone'
         'Email Email Email Email'
+     
         'Pass Pass Pass Pass';
     gap: 15px;
 }

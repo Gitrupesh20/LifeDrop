@@ -18,6 +18,8 @@ import Paper from "@mui/material/Paper";
 import AppBar from "@mui/material/AppBar";
 
 import "./Navbar.css";
+import { Box, Button, Fade } from "@mui/material";
+import { red } from "@mui/material/colors";
 
 function stringAvatar(name) {
   return {
@@ -39,6 +41,58 @@ function HideOnScroll(props) {
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
 };
+
+function SignUpButton() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <>
+      <button
+        id="fade-button"
+        aria-controls={open ? "fade-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        New User
+      </button>
+      <Menu
+        id="fade-menu"
+        MenuListProps={{
+          "aria-labelledby": "fade-button",
+        }}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Fade}
+      >
+        <MenuItem
+          onClick={() => {
+            setAnchorEl(null);
+            window.open("/donors/signup", "_self");
+          }}
+        >
+          New Donor
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            setAnchorEl(null);
+            window.open("/user/signup", "_self");
+          }}
+        >
+          New User
+        </MenuItem>
+      </Menu>
+    </>
+  );
+}
 
 export default function Navbar() {
   const [userName, setuserName] = useState(UserService.getUsername());
@@ -205,15 +259,9 @@ export default function Navbar() {
                 </Menu>
               </Stack>
             ) : (
-              // <button id='logout' onClick={(e) => {AuthenticationService.logout(); window.location.reload();}}>SignOut</button>
+              //<button id='logout' onClick={(e) => {AuthenticationService.logout(); window.location.reload();}}>SignOut</button>
               <>
-                <button
-                  onClick={(e) => {
-                    window.open("donors/signup", "_self");
-                  }}
-                >
-                  New Donor
-                </button>
+                <SignUpButton />
                 <button
                   onClick={(e) => {
                     window.open("/signin", "_self");

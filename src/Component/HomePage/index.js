@@ -59,9 +59,9 @@ export const Header = () => {
               Find A Blood Donor &nbsp; &#10095;
             </button>
             <br />
-            <button>Post Blood Request &nbsp; &#10095;</button>
+             <button>Post Blood Request &nbsp; &#10095;</button> 
             <br />
-            {/* <button>Service Organisation (Comming Soon)</button><br/> */}
+           {/* <button>Service Organisation (Comming Soon)</button><br/>*/}
           </section>
         </div>
         <div className="head_Img">
@@ -141,9 +141,6 @@ export const Info = () => {
           <div style={{ textAlign: "center" }}>
             <button id="readMore">READ MORE</button>
           </div>
-
-          {/* Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-					odit. */}
         </div>
         <div>
           <ShowRequestPost />
