@@ -59,9 +59,15 @@ export const Header = () => {
               Find A Blood Donor &nbsp; &#10095;
             </button>
             <br />
-             <button>Post Blood Request &nbsp; &#10095;</button> 
+            <button
+              onClick={(e) => {
+                window.open("/post-request", "_self");
+              }}
+            >
+              Post Blood Request &nbsp; &#10095;
+            </button>
             <br />
-           {/* <button>Service Organisation (Comming Soon)</button><br/>*/}
+            {/* <button>Service Organisation (Comming Soon)</button><br/>*/}
           </section>
         </div>
         <div className="head_Img">

@@ -16,10 +16,10 @@ import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Paper from "@mui/material/Paper";
 import AppBar from "@mui/material/AppBar";
-
-import "./Navbar.css";
 import { Box, Button, Fade } from "@mui/material";
-import { red } from "@mui/material/colors";
+import "./Navbar.css";
+
+import Notification from "./Notification";
 
 function stringAvatar(name) {
   return {
@@ -108,16 +108,6 @@ export default function Navbar() {
     setuserAnchorEl(null);
   };
 
-  const [notificationanchorEl, setnotificationAnchorEl] = useState(null);
-  const openNotificationDropdown = Boolean(notificationanchorEl);
-
-  const handleNotificationClick = (event) => {
-    setnotificationAnchorEl(event.currentTarget);
-  };
-  const handleNotificationClose = () => {
-    setnotificationAnchorEl(null);
-  };
-
   useEffect(() => {
     (async () => {
       const loggedIn = await AuthenticationService.isUserLoggedIn();
@@ -144,48 +134,7 @@ export default function Navbar() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Badge
-                  id="notification-button"
-                  aria-controls={
-                    openNotificationDropdown ? "notification-menu" : undefined
-                  }
-                  aria-haspopup="true"
-                  aria-expanded={openNotificationDropdown ? "true" : undefined}
-                  onClick={handleNotificationClick}
-                  variant="dot"
-                  color="warning"
-                  title="Notifications"
-                  sx={{ cursor: "pointer" }}
-                >
-                  <NotificationsIcon color="action" />
-                </Badge>
-                <Menu
-                  id="notification-menu"
-                  anchorEl={notificationanchorEl}
-                  open={openNotificationDropdown}
-                  onClose={handleNotificationClose}
-                  MenuListProps={{
-                    "aria-labelledby": "notification-button",
-                  }}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "right",
-                  }}
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                >
-                  <MenuItem onClick={handleNotificationClose}>
-                    Notification 1
-                  </MenuItem>
-                  <MenuItem onClick={handleNotificationClose}>
-                    Notification 2
-                  </MenuItem>
-                  <MenuItem onClick={handleNotificationClose}>
-                    Notification 3
-                  </MenuItem>
-                </Menu>
+                <Notification />
 
                 <Stack
                   id="user-button"

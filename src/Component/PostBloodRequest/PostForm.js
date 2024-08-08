@@ -17,7 +17,7 @@ import { Snackbar } from "@mui/material";
 import State_City_Data from "../../Service/Data";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
-import "./RequestBlood.css";
+import "../RequestBlood/RequestBlood.css";
 import userService from "../../Service/UserService";
 
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
@@ -41,11 +41,7 @@ TextMaskCustom.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default function RequestForm() {
-  if (!userService.isDonorSelected()) {
-    window.location.replace("/search-for-blood");
-  }
-
+export default function PostForm() {
   const { data } = State_City_Data;
   const stateList = Object.keys(data);
   const [selectedState, setSelectedState] = useState();
@@ -60,7 +56,7 @@ export default function RequestForm() {
     streetAddress: "",
     city: "",
     governmentId: "",
-    donors: userService.getRequestDonor()?.split(","),
+    donors: null,
     state: "",
   });
   const [Msg, setMsg] = useState();
@@ -83,12 +79,14 @@ export default function RequestForm() {
         userService.deleteRequestDonor();
       })
       .catch((err) => {
+        console.log(err.response);
         setSubmitSpinner(false);
         setAlert(true);
-        setMsg("Failed to send request!");
+        setMsg(err.response.data.message);
         setMsgColor("error");
-        console.log(err);
+        console.log(err.res);
       });
+    console.log(patientDetail);
   };
 
   const handleCloseAlert = (event, reason) => {
@@ -107,7 +105,7 @@ export default function RequestForm() {
       >
         <div className="request-container">
           <h1>
-            Your Are One Step Away to Request <br />
+            Your Are One Step Away to Post Request <br />
             <span>Fill Patient Details</span>
           </h1>
           <Snackbar
@@ -390,7 +388,7 @@ export default function RequestForm() {
                     ":hover": { bgcolor: "#c6414c" },
                   }}
                 >
-                  Submit
+                  Post
                   {submitSpinner && (
                     <CircularProgress
                       sx={{ ml: 2, color: "white" }}

@@ -7,7 +7,6 @@ import CardContent from "@mui/material/CardContent";
 import Checkbox from "@mui/material/Checkbox";
 import CircularProgress from "@mui/material/CircularProgress";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import dayjs from "dayjs";
 import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
 import HowToRegTwoToneIcon from "@mui/icons-material/HowToRegTwoTone";
@@ -158,13 +157,13 @@ export default function SignUp() {
         .catch((error) => {
           setSpinner(false);
           setAlert(true);
-          console.log(error);
+          console.error(error);
           if (
             error.response &&
-            error.response.data &&
-            error.response.data.message
+            error.response?.data &&
+            error.response?.data?.message
           )
-            setErrorMsg(error.response.data.message);
+            setErrorMsg(error?.response?.data?.message);
           else setErrorMsg("Failed to Register, Try after some time...");
         });
     }

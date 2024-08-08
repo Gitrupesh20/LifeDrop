@@ -35,7 +35,7 @@ class AuthenticationService {
   getUserRoles() {
     const J_Token = sessionStorage.getItem(USER_NAME_SESSION_ATTRIBUTE_NAME);
     var decoded_token = jwt_decode(J_Token);
-    console.log(decoded_token);
+    //console.log(decoded_token);
     return decoded_token.roles;
   }
 

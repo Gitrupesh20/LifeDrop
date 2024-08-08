@@ -15,41 +15,12 @@ class RequestService {
   }
 
   getRequestsStatus() {
-    return axios.get(AuthenticationService.API_URL + "/donations/requests", {
-      headers: AuthenticationService.authHeader(),
-    });
-    const send_request_status = [
+    return axios.get(
+      AuthenticationService.API_URL + "/donations/requests/status",
       {
-        name: "Abhinav Raj Singh",
-        bloodGroup: "A+",
-        gender: "Male",
-        status: "Pending",
-        address: "Khajuri Khas Delhi 110094",
-      },
-      {
-        name: "Rupesh Kr Sharma",
-        bloodGroup: "B+",
-        gender: "Male",
-        status: "Approved",
-        address: "Burari, North delhi, Delhi 110084",
-      },
-      {
-        name: "Roshan Singh Rajput",
-        bloodGroup: "O+",
-        gender: "Male",
-        status: "Rejected",
-        address: "Tis Hazari, North Delhi,Delhi 110054",
-      },
-      {
-        name: "Kishan Kumar Tiwari",
-        bloodGroup: "A+",
-        gender: "Male",
-        status: "Pending",
-        address: "Rohini Sec:7, North delhi, Delhi 110085",
-      },
-    ];
-
-    return send_request_status;
+        headers: AuthenticationService.authHeader(),
+      }
+    );
   }
 
   getGeoCode(address) {

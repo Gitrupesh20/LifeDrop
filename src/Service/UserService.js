@@ -14,6 +14,7 @@ const USER_LOCATION_LON = "userLongitude";
 const USER_DOB = "DOB";
 const USER_LAST_DATE_OF_DONATION = "LDDs";
 const USER_GENDER = "gender";
+const USER_AVALIBILITY = "status";
 
 class UserService {
   getUsersDetails() {
@@ -23,12 +24,64 @@ class UserService {
   }
 
   findDonor(searchBy, pageNo) {
-    console.log(searchBy);
+    const bloodGroup = encodeURIComponent(searchBy.bloodGroup);
+    const city = encodeURIComponent(searchBy.city);
+    const pincode = encodeURIComponent(searchBy.pincode);
     return axios.get(
-      `${AuthenticationService.API_URL}/bloodRequests/find-donor?bloodGroup=${searchBy.bloodGroup}&city=${searchBy.city}&pincode=${searchBy.pincode}&pageNo=${pageNo}`
+      `${AuthenticationService.API_URL}/bloodRequests/find-donor?bloodGroup=${bloodGroup}&city=${city}&pincode=${pincode}&pageNo=${pageNo}`
     );
   }
-
+  getUserNotifications() {
+    return axios.get(AuthenticationService.API_URL + "/notification", {
+      headers: AuthenticationService.authHeader(),
+    });
+  }
+  updateUserProfileInfo(Details) {
+    return axios.put(
+      `${AuthenticationService.API_URL}/update-profile`,
+      Details,
+      {
+        headers: AuthenticationService.authHeader(),
+      }
+    );
+  }
+  updatePassword(password) {
+    return axios.put(
+      `${AuthenticationService.API_URL}/update-password`,
+      password,
+      { headers: AuthenticationService.authHeader() }
+    );
+  }
+  updateUserAddress(Address) {
+    return axios.put(
+      `${AuthenticationService.API_URL}/update-address`,
+      Address,
+      { headers: AuthenticationService.authHeader() }
+    );
+  }
+  updateUserStatus(state) {
+    return axios.put(`${AuthenticationService.API_URL}/update-status`, state, {
+      headers: AuthenticationService.authHeader(),
+    });
+  }
+  sendAcceptRequest(id) {
+    return axios.post(
+      AuthenticationService.API_URL + "/accept-request",
+      { id: id },
+      {
+        headers: AuthenticationService.authHeader(),
+      }
+    );
+  }
+  sendDeclineRequest(id) {
+    return axios.post(
+      AuthenticationService.API_URL + "/decline-request",
+      { id: id },
+      {
+        headers: AuthenticationService.authHeader(),
+      }
+    );
+  }
   setRequestDonor(donorList) {
     sessionStorage.setItem(
       USER_REQUEST_DONOR_SESSION_ATTRIBUTE_NAME,
@@ -45,7 +98,7 @@ class UserService {
   }
 
   sendRequest(request) {
-    console.log(request);
+    //console.log(request);
     return axios.post(
       `${AuthenticationService.API_URL}/bloodRequests/request`,
       request,
@@ -71,6 +124,10 @@ class UserService {
     localStorage.setItem(USER_DOB, UserDetails?.user?.DOB);
     localStorage.setItem(USER_GENDER, UserDetails?.user?.gender);
     localStorage.setItem(USER_LAST_DATE_OF_DONATION, UserDetails?.user?.LDDs);
+    localStorage.setItem(
+      USER_AVALIBILITY,
+      UserDetails?.user?.AvalibilityStatus
+    );
 
     RequestService.getGeoCode(UserDetails?.user?.address);
     /*        .then(response => {
@@ -92,7 +149,6 @@ class UserService {
   }
   getUserAdress() {
     const address = sessionStorage.getItem(USER_ADDRESS);
-    console.log(address);
     if (address) {
       return address;
     }
@@ -113,6 +169,10 @@ class UserService {
   getUserlastDonationDate() {
     return localStorage.getItem(USER_LAST_DATE_OF_DONATION);
   }
+  getUserAvalibilityStatus() {
+    console.log(localStorage.getItem(USER_AVALIBILITY));
+    return localStorage.getItem(USER_AVALIBILITY) === "true";
+  }
 
   calculateDistance(dAddress) {
     // 18.6196,73.7923,18.4679,73.8357;
@@ -124,7 +184,7 @@ class UserService {
       lat1 = response.candidates[0].location.x;
       lon1 = response.candidates[0].location.y;
       console.log(response.candidates[0].location);
-      // return response.candidates[0].location;     // => { x: -77.036533, y: 38.898719, spatialReference: ... }
+      return response.candidates[0].location; // => { x: -77.036533, y: 38.898719, spatialReference: ... }
     });
 
     // console.log(donorLocation);

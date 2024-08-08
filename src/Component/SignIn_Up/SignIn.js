@@ -30,6 +30,7 @@ export default function SignIn() {
     username: "",
     password: "",
   });
+
   ///Log Out if any user is log in
   useEffect(() => {
     const checkSessionAndLogout = async () => {
@@ -76,7 +77,7 @@ export default function SignIn() {
           console.log(response.data);
           if (
             AuthenticationService.registerSuccessfulLogin(
-              response.data.AccessToken
+              response.data?.AccessToken
             )
           ) {
             setSpinner(false);
@@ -94,7 +95,7 @@ export default function SignIn() {
         })
         .catch((error) => {
           setAlert(true);
-          seterrorMsg(error.response.data.message);
+          seterrorMsg(error.response?.data?.message || "Try again latter");
           setSpinner(false);
         });
     }
