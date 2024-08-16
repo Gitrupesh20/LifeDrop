@@ -15,7 +15,7 @@ export default function FAQ() {
   return (
     <>
       <div className="faqcard" id="faq" style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/faq_bg.jpg'})`}}>
-        <h2>FAQ's </h2>
+        <h2>FAQ's</h2>
         <hr />
         <p>The health and safety of the donor as well as the recipient must be safeguarded.</p>
         <div className="quescard">
