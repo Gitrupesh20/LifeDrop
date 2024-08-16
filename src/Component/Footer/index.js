@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
       <hr />
       <div className="footersec" id="downfooter">
-        <p>© LifeDrop 2023. We love our users!</p>
+        <p>© LifeDrop 2024. We love our users!</p>
         <section>
           <a href="#">Privacy & Policies</a>
           <a href="#">Terms & Conditions</a>
